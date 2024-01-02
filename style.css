@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#contenedorProductos{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 140px;
+}
+
+header {
+    background-color: pink;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.4rem;
+}
+
+body {
+    background-color: rgb(25, 26, 24);
+}
+
+.cajaNotas {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 13px;
+    background-color: pink;
+    width: 400px;
+    height: 550px;
+    display: block;
+}
+
+.cajaNotas div{
+    margin-top: 40px;
+}
+
+.cajaNotas div input{
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card-img {
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.card {
+    width: 320px;
+    height: 350px;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px rgb(29, 29, 29);
+    border: 1px solid rgba(0, 0, 0, 0.179);
+    background-color: blanchedalmond;
+    overflow: hidden;
+}
+
+.rojo {
+    color: red;
+    background-color: bisque;
+}
+
