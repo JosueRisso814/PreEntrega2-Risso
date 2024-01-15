@@ -10,8 +10,7 @@ const PROD1 = new Producto ("Cappuccino", 1400, "starbucks.webp");
 const PROD2 = new Producto ("Cafe", 1200, "cafe.webp");
 const PROD3 = new Producto ("Cafe Espresso", 1500, "cappuccino1.webp");
 
-
-alert("Bienvenido al carrito de compras...")
+function ingresoDeProductos () {
 let NumProdNewUser = prompt("ingrese la cantidad de productos a ingresar al carrito: ");
 
 let arrayProductos = [PROD1, PROD2, PROD3];
@@ -25,13 +24,17 @@ for (let i = 1; i <= NumProdNewUser; i++) {
 
     arrayProductos.push(productoUsuario);
 };
+    return arrayProductos;
+}
 
-const totalCarrito = arrayProductos.reduce((acumulador, numero) => acumulador + numero.precio, 0);
-alert("El total de productos en el carrito es de $" + totalCarrito);
+function calculoTotalCarrito (productos) {
+return productos.reduce((acumulador, numero) => acumulador + numero.precio, 0);
+}
 
+function mostrarProductosDom (productos) {
 const contenedorProductos = document.getElementById("contenedorProductos");
 
-    arrayProductos.forEach(producto => {
+    productos.forEach(producto => {
         const div = document.createElement("div");
 
         div.className = "card";
@@ -47,5 +50,14 @@ const contenedorProductos = document.getElementById("contenedorProductos");
 
             contenedorProductos.appendChild(div);
     });
+}
 
+    alert("Bienvenido al carrito de compras...");
 
+    const productosUsuario = ingresoDeProductos();
+
+    const totalCarrito = calculoTotalCarrito(productosUsuario);
+
+    alert("El total de productos en el carrito es de $" + totalCarrito);
+
+    mostrarProductosDom(productosUsuario);
